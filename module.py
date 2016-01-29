@@ -1,11 +1,10 @@
-"""
-This is a module level docstring. It documents the module, module.py.
+"""This is a module level docstring. It documents the module, module.py.
 The docstring has to go at the top of the module.
 
 This is also a multiline string. It is NOT a comment. 
 Comments aren't parsed. Strings are.
 
-A module is a file that ends in .py, and contains Python code. 
+A module is typically a file that ends in .py, and contains Python code. 
 
 If the module is imported, and help(module) called, 
 the docstring will show as the help.
@@ -21,7 +20,9 @@ This is a module level docstring...
 
 # Keywords are words you can't use as variable names. 
 # (You can assign variable names to point to values.)
-# "import" is a keyword. For example:
+# "import" is a keyword. 
+
+# For example, let's import the module called keyword:
 
 import keyword
 # after you import a module, you can use things in that module.
@@ -33,12 +34,18 @@ import keyword
 #  'not', 'or', 'pass', 'print', 'raise', 'return', 'try', 
 #  'while', 'with', 'yield']
 
+# we've now used the keyword, `import`
 
+# the keyword module is now a global name in this module.
+# any piece of code in this module can access it by name now.
 
 def a_function():
-    """
-    This is a function level docstring.
+    """This is a function level docstring.
     This function takes no arguments, and returns None
+    
+    None is a single object that basically means no-value in Python.
+    It represents the null value for Python.
+    
     All functions return None unless they explicitly return something else.
     
     You can see the help on this function just like you can a module-level docstring:
@@ -46,10 +53,20 @@ def a_function():
     >>> help(a_function):
     This is a function level ...
     """
+    
+# we've now used the keyword def! 
+# the function it defined is now a global name that can be accessed from any
+# piece of code in the module.
+
+def print_all_the_keywords():
+    """This function iterates over the keywords and prints them out.
+    again, because it doesn't return anything explicitly, it returns None
+    """
+    for each_keyword in keyword.kwlist:
+        print(each_keyword)
 
 def another_function(arg_1, arg2=None):
-    """
-    This function takes a required argument, arg_1, 
+    """This function takes a required argument, arg_1, 
     and an optional argument, arg_2, which defaults to None.
     """
     if arg_2 is None:
