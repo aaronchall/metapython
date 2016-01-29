@@ -39,6 +39,7 @@ import keyword
 # the keyword module is now a global name in this module.
 # any piece of code in this module can access it by name now.
 
+# def starts a function statement
 def a_function():
     """This is a function level docstring.
     This function takes no arguments, and returns None
@@ -77,15 +78,19 @@ def main():
     """
     This is the main process of this module when the module is 
     the entry point for the program.
+    
+    This will attempt to illustrate the value of 
+    giving your functions descriptive names:
     """
     a_function()
+    print_all_the_keywords()
     another_function(1, 2)
 
 
 # This is at the end of most Python modules. 
 # __name__ is a name in all Python modules
 # it is usually the name of the module 
-# (in this case module, since the file is module.py)
+# (in this case, `module`, since the file is module.py)
 # however, if you run your program with a module, it's __name__ is "__main__".
 if __name__ == '__main__':
     main() # So this will run the main function when it's the main module.
