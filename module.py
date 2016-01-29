@@ -1,16 +1,23 @@
 """
 This is a module level docstring. It documents the module, module.py.
+The docstring has to go at the top of the module.
+
+This is also a multiline string. It is NOT a comment. 
+Comments aren't parsed. Strings are.
 
 A module is a file that ends in .py, and contains Python code. 
 
+If the module is imported, and help(module) called, 
+the docstring will show as the help.
 
-
-If the module is imported, and help(module) called, it will show this as the help. i.e.
+(Where you see `>>>` this is what you would see in an interactive Python shell.)
 
 >>> import module
 >>> help(module)
 This is a module level docstring...
 """
+
+# This is a comment. It isn't parsed by the Python interpreter.
 
 def a_function():
     """
