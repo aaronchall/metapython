@@ -52,7 +52,9 @@ def another_function(arg_1, arg2=None):
     This function takes a required argument, arg_1, 
     and an optional argument, arg_2, which defaults to None.
     """
-
+    if arg_2 is None:
+        return arg_1
+    return arg_1 + arg_2
 
 def main():
     """
@@ -61,6 +63,8 @@ def main():
     """
     a_function()
     another_function(1, 2)
+
+
 # This is at the end of most Python modules. 
 # __name__ is a name in all Python modules
 # it is usually the name of the module 
