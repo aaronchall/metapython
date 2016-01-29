@@ -1,6 +1,10 @@
 """
 This is a module level docstring. It documents the module, module.py.
 
+A module is a file that ends in .py, and contains Python code. 
+
+
+
 If the module is imported, and help(module) called, it will show this as the help. i.e.
 
 >>> import module
